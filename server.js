@@ -31,7 +31,7 @@ function createTemplate (data) {
     var heading = data.heading;
     var content =data.content;
 
-var htmlTemplate =
+    var htmlTemplate =
     <html>
     <head>
         <title>
@@ -63,7 +63,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function (req, res) {
-    res.send(creaeTemplate(articleone));
+    res.send(createTemplate(articleone));
 });
 
 app.get('/article-two',function (req, res) {
