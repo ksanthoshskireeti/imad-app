@@ -5,25 +5,28 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleone = {
-  title: 'ARTICLE ONE KSK',
-  heading:'ARTICLE ONE',
-  date: 'aug 26,2017',
-  content:`
-        <p>
-            this is my article this is my article this is my article this is my article this 
-        </p>
-        <p>
-            this is my article this is my article this is my article this is my article this 
-        </p>
-        <p>
-            this is my article this is my article this is my article this is my article this is  
-        </p>
-        <p>
-            this is my article this is my article this is my article this is my article this is 
-        </p>`
+var articles = {
+var articleone : {
+      title: 'ARTICLE ONE KSK',
+      heading:'ARTICLE ONE',
+      date: 'aug 26,2017',
+      content:`
+            <p>
+                this is my article this is my article this is my article this is my article this 
+            </p>
+            <p>
+                this is my article this is my article this is my article this is my article this 
+            </p>
+            <p>
+                this is my article this is my article this is my article this is my article this is  
+            </p>
+            <p>
+                this is my article this is my article this is my article this is my article this is 
+            </p>`
   
+        },
+var articletwo :{},
+var articlethree:{},
 };
 
 function createTemplate (data) {
@@ -36,7 +39,7 @@ function createTemplate (data) {
     <html>
     <head>
         <title>
-            ARTICLE ONE KSK
+           ${title}
         </title>
                 <meta name="viewport" content="width-device-width,initial-scale-1"/>
                 <link href="/ui/style.css" rel="stylesheet" />
@@ -47,22 +50,11 @@ function createTemplate (data) {
             <a href='/'>Home</a>
         </div>
         <hr/>
-        <h3>ARTICLE ONE</h3>
+        <h3>${heading}</h3>
         <div>
-            aug 26,2017
+            ${date}
         </div>
-        <p>
-            this is my article this is my article this is my article this is my article this 
-        </p>
-        <p>
-            this is my article this is my article this is my article this is my article this 
-        </p>
-        <p>
-            this is my article this is my article this is my article this is my article this is  
-        </p>
-        <p>
-            this is my article this is my article this is my article this is my article this is 
-        </p>
+       ${content}
     </div>
     </body>
 </html>
