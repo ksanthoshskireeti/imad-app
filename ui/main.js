@@ -5,3 +5,7 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
 
 element.innerHTML = 'new value';
+
+// MOVE THE IMAGE  OR ANIMATE
+
+var element =document.getElemnetById('madi');
