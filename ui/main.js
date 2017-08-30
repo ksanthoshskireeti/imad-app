@@ -8,7 +8,7 @@ element.innerHTML = 'new value';
 
 // MOVE THE IMAGE  OR ANIMATE
 
-var element =document.getElemnetById('madi');
+var img =document.getElemnetById('madi');
 
 img.onclick = function(){
     img.style.marginLeft = '100px';
